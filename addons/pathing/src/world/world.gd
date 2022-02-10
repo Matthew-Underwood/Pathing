@@ -36,6 +36,10 @@ func global_to_world(pos : Vector2) -> Vector2:
 	return _tile_map.world_to_map(pos)
 
 
+func world_to_global(pos : Vector2) -> Vector2:
+	return _tile_map.map_to_world(pos)
+	
+
 func get_world() -> TileMap:
 	return _tile_map
 	
