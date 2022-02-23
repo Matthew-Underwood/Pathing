@@ -10,12 +10,7 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
-"class": "MU_WorldValidation",
-"language": "GDScript",
-"path": "res://addons/pathing/src/world/world_validation.gd"
-}, {
-"base": "Reference",
-"class": "MU_World_TileMap",
+"class": "MU_World",
 "language": "GDScript",
 "path": "res://addons/pathing/src/world/world.gd"
 }, {
@@ -30,8 +25,7 @@ _global_script_classes=[ {
 "path": "res://addons/pathing/src/pathing/pathing_factory.gd"
 } ]
 _global_script_class_icons={
-"MU_WorldValidation": "",
-"MU_World_TileMap": "",
+"MU_World": "",
 "Pathing": "",
 "PathingFactory": ""
 }
