@@ -1,4 +1,4 @@
-class_name MU_World_TileMap
+class_name MU_World
 
 var _size : Vector2
 var _non_walkable_points : Array
@@ -37,9 +37,4 @@ func global_to_world(pos : Vector2) -> Vector2:
 
 
 func world_to_global(pos : Vector2) -> Vector2:
-	return _tile_map.map_to_world(pos)
-	
-
-func get_world() -> TileMap:
-	return _tile_map
-	
+	return _tile_map.map_to_world(pos) + (_tile_map.cell_size / 2)
