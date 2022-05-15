@@ -595,9 +595,9 @@ _global_script_classes=[ {
 "path": "res://addons/pathing/src/pathing_factory.gd"
 }, {
 "base": "GdUnitTestSuite",
-"class": "MUP_Test_WorldTest",
+"class": "MUP_Test_World",
 "language": "GDScript",
-"path": "res://addons/pathing/test/main_2d.gd"
+"path": "res://addons/pathing/test/world.gd"
 }, {
 "base": "Reference",
 "class": "MUP_World",
@@ -837,7 +837,7 @@ _global_script_class_icons={
 "LocalTime": "",
 "MUP_Pathing": "",
 "MUP_Pathing_Factory": "",
-"MUP_Test_WorldTest": "",
+"MUP_Test_World": "",
 "MUP_World": "",
 "MUP_World_Factory": "",
 "MUP_World_Mesh_Picking": "",
@@ -867,7 +867,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Pathing"
-run/main_scene="res://2d_test.tscn"
+run/main_scene="res://addons/pathing/scenes/test_3d.tscn"
 
 [editor_plugins]
 
@@ -888,4 +888,3 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 environment/default_clear_color=Color( 0.12549, 0.12549, 0.12549, 1 )
-environment/default_environment="res://new_environment.tres"
