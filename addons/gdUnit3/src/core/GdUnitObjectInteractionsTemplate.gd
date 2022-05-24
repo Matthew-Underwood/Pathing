@@ -18,6 +18,7 @@ func __do_verify_interactions(times :int = 1, expect_result :int = GdUnitAssert.
 	return self
 
 func __verify_interactions(args :Array):
+	print(args)
 	var summary := Dictionary()
 	var total_interactions := 0
 	var matcher := GdUnitArgumentMatchers.to_matcher(args)

@@ -17,7 +17,6 @@ func add_walkable_cells(obstacle_list = []) -> Array:
 			var point = Vector2(x, y)
 			if point in obstacle_list:
 				continue
-
 			points_array.append(point)
 			# The AStar class references points with indices.
 			# Using a function to calculate the index from a point's coordinates
@@ -25,7 +24,7 @@ func add_walkable_cells(obstacle_list = []) -> Array:
 			var point_index = _calculate_index(point)
 			# AStar works for both 2d and 3d, so we have to convert the point
 			# coordinates from and to Vector3s.
-			_aStar.add_point(point_index, Vector3(point.x, point.y, 0.0))
+			_aStar.add_point(point_index, Vector3(point.x, point.y, 0))
 	return points_array
 
 
@@ -91,5 +90,3 @@ func get_path(start_position : Vector3, end_position : Vector3):
 
 func _calculate_index(point):
 	return point.x + _world.get_size().x * point.y
-
-
