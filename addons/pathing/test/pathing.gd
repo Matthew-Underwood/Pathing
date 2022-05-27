@@ -14,6 +14,4 @@ func test_add_cells():
 
 
 func _setup(a_star, world):
-	var pathing = load("res://addons/pathing/src/pathing.gd")
-	pathing = pathing.new(a_star, world)
-	return pathing
+	return MUP_Pathing.new(a_star, world)

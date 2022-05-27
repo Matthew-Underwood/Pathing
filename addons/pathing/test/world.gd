@@ -54,6 +54,4 @@ func test_walkable():
 
 
 func _setup(size, unwalkable_points, transformer):
-	var world = load("res://addons/pathing/src/world.gd")
-	world = world.new(size, unwalkable_points, transformer)
-	return world
+	return MUP_World.new(size, unwalkable_points, transformer)
