@@ -7,7 +7,5 @@ func _init(world : MUP_World):
 
 
 func create() -> MUP_Pathing:
-	var pathing = load("res://addons/pathing/src/pathing/pathing.gd")
 	var aStar = AStar.new()
-	pathing = pathing.new(aStar, _world)
-	return pathing
+	return  MUP_Pathing.new(aStar, _world)
