@@ -1,5 +1,4 @@
 .import/
 .mono/
 .vscode/
-addons/*
-!addons/pathing
+addons/gdUnit3
