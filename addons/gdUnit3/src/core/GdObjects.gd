@@ -463,17 +463,9 @@ static func extract_class_name_from_class_path(clazz_path :PoolStringArray) -> S
 	# return original class name if engine class
 	if ClassDB.class_exists(base_clazz):
 		return base_clazz
-	var split_class_path = base_clazz.split("/")
-	var split_class_path_size =  split_class_path.size() - 1
-	split_class_path.resize(split_class_path_size)
-	split_class_path = split_class_path.join("/")
 	var clazz_name := to_pascal_case(base_clazz.get_basename().get_file())
 	for path_index in range(1, clazz_path.size()):
 		clazz_name += "." + clazz_path[path_index]
-	if (split_class_path == "res://addons/pathing/src"):
-		var class_namespace_prefix = "MUP_"
-		clazz_name = class_namespace_prefix + clazz_name
-	
 	return  clazz_name
 
 static func extract_class_name(clazz) -> Result:
@@ -484,12 +476,13 @@ static func extract_class_name(clazz) -> Result:
 		# is instance a script instance?
 		var script := clazz.script as GDScript
 		if script != null:
-			var clazz_path := extract_class_path(script)
-			return Result.success(extract_class_name_from_class_path(clazz_path))
+			return extract_class_name(script)
 		return Result.success(clazz.get_class())
 
 	# extract name form full qualified class path
 	if clazz is String:
+		if ClassDB.class_exists(clazz):
+			return Result.success(clazz)
 		var source_sript :Script = load(clazz)
 		var clazz_name = load("res://addons/gdUnit3/src/core/parse/GdScriptParser.gd").new().get_class_name(source_sript)
 		return Result.success(to_pascal_case(clazz_name))
@@ -498,8 +491,10 @@ static func extract_class_name(clazz) -> Result:
 		return Result.error("Can't extract class name for an primitive '%s'" % type_as_string(typeof(clazz)))
 
 	if is_script(clazz):
-		var clazz_path := extract_class_path(clazz)
-		return Result.success(extract_class_name_from_class_path(clazz_path))
+		if clazz.resource_path.empty():
+			var class_path = extract_class_name_from_class_path(extract_class_path(clazz))
+			return Result.success(class_path);
+		return extract_class_name(clazz.resource_path)
 
 	# need to create an instance for a class typ the extract the class name
 	var instance = clazz.new()
