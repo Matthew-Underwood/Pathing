@@ -585,12 +585,12 @@ _global_script_classes=[ {
 "path": "res://addons/gdUnit3/src/core/LocalTime.gd"
 }, {
 "base": "Reference",
-"class": "MUP_DIMENSION_2D_PROCESSOR",
+"class": "MUP_Dimension_2D_Processor",
 "language": "GDScript",
 "path": "res://addons/pathing/src/dimension/2d_processor.gd"
 }, {
 "base": "Reference",
-"class": "MUP_DIMENSION_3D_PROCESSOR",
+"class": "MUP_Dimension_3D_Processor",
 "language": "GDScript",
 "path": "res://addons/pathing/src/dimension/3d_processor.gd"
 }, {
@@ -640,7 +640,47 @@ _global_script_classes=[ {
 "path": "res://addons/pathing/src/world/transformers/screen_tilemap.gd"
 }, {
 "base": "Reference",
-"class": "MU_World",
+"class": "MUW_Mesh_Picker",
+"language": "GDScript",
+"path": "res://addons/world/src/mesh_picker.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Resolver_Height",
+"language": "GDScript",
+"path": "res://addons/world/src/resolver/height.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Resolver_Height_Factory",
+"language": "GDScript",
+"path": "res://addons/world/src/resolver/height_factory.gd"
+}, {
+"base": "GdUnitTestSuite",
+"class": "MUW_Test_World",
+"language": "GDScript",
+"path": "res://addons/world/test/world.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Transformers_Screen_Mesh",
+"language": "GDScript",
+"path": "res://addons/world/src/transformers/screen_mesh.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Transformers_Screen_Tilemap",
+"language": "GDScript",
+"path": "res://addons/world/src/transformers/screen_tilemap.gd"
+}, {
+"base": "Reference",
+"class": "MUW_World",
+"language": "GDScript",
+"path": "res://addons/world/src/world.gd"
+}, {
+"base": "Reference",
+"class": "MUW_World_Factory",
+"language": "GDScript",
+"path": "res://addons/world/src/world_factory.gd"
+}, {
+"base": "Reference",
+"class": "MU_World_TileMap",
 "language": "GDScript",
 "path": "res://addons/pathing/src/world/world.gd"
 }, {
@@ -860,8 +900,8 @@ _global_script_class_icons={
 "IntFuzzer": "",
 "JUnitXmlReport": "",
 "LocalTime": "",
-"MUP_DIMENSION_2D_PROCESSOR": "",
-"MUP_DIMENSION_3D_PROCESSOR": "",
+"MUP_Dimension_2D_Processor": "",
+"MUP_Dimension_3D_Processor": "",
 "MUP_Pathing": "",
 "MUP_Pathing_Factory": "",
 "MUP_Test_Pathing": "",
@@ -871,7 +911,15 @@ _global_script_class_icons={
 "MUP_World_Mesh_Picking": "",
 "MUP_World_Transformers_Screen_Mesh": "",
 "MUP_World_Transformers_Screen_Tilemap": "",
-"MU_World": "",
+"MUW_Mesh_Picker": "",
+"MUW_Resolver_Height": "",
+"MUW_Resolver_Height_Factory": "",
+"MUW_Test_World": "",
+"MUW_Transformers_Screen_Mesh": "",
+"MUW_Transformers_Screen_Tilemap": "",
+"MUW_World": "",
+"MUW_World_Factory": "",
+"MU_World_TileMap": "",
 "Pathing": "",
 "RPC": "",
 "RPCClientConnect": "",
@@ -897,7 +945,6 @@ _global_script_class_icons={
 [application]
 
 config/name="Pathing"
-run/main_scene="res://addons/pathing/scenes/test_3d.tscn"
 
 [editor_plugins]
 
@@ -918,3 +965,4 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 environment/default_clear_color=Color( 0.12549, 0.12549, 0.12549, 1 )
+environment/default_environment="res://new_environment.tres"
