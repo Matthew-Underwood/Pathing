@@ -585,16 +585,6 @@ _global_script_classes=[ {
 "path": "res://addons/gdUnit3/src/core/LocalTime.gd"
 }, {
 "base": "Reference",
-"class": "MUP_Dimension_2D_Processor",
-"language": "GDScript",
-"path": "res://addons/pathing/src/dimension/2d_processor.gd"
-}, {
-"base": "Reference",
-"class": "MUP_Dimension_3D_Processor",
-"language": "GDScript",
-"path": "res://addons/pathing/src/dimension/3d_processor.gd"
-}, {
-"base": "Reference",
 "class": "MUP_Pathing",
 "language": "GDScript",
 "path": "res://addons/pathing/src/pathing.gd"
@@ -609,55 +599,50 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/pathing/test/pathing.gd"
 }, {
-"base": "GdUnitTestSuite",
-"class": "MUP_Test_World",
-"language": "GDScript",
-"path": "res://addons/pathing/test/world.gd"
-}, {
-"base": "Reference",
-"class": "MUP_World",
-"language": "GDScript",
-"path": "res://addons/pathing/src/world.gd"
-}, {
-"base": "Reference",
-"class": "MUP_World_Factory",
-"language": "GDScript",
-"path": "res://addons/pathing/src/world_factory.gd"
-}, {
-"base": "Reference",
-"class": "MUP_World_Mesh_Picking",
-"language": "GDScript",
-"path": "res://addons/pathing/src/world/mesh_picking.gd"
-}, {
-"base": "Reference",
-"class": "MUP_World_Transformers_Screen_Mesh",
-"language": "GDScript",
-"path": "res://addons/pathing/src/world/transformers/screen_mesh.gd"
-}, {
-"base": "Reference",
-"class": "MUP_World_Transformers_Screen_Tilemap",
-"language": "GDScript",
-"path": "res://addons/pathing/src/world/transformers/screen_tilemap.gd"
-}, {
 "base": "Reference",
 "class": "MUW_Mesh_Picker",
 "language": "GDScript",
 "path": "res://addons/world/src/mesh_picker.gd"
 }, {
 "base": "Reference",
-"class": "MUW_Resolver_Height",
+"class": "MUW_Points",
 "language": "GDScript",
-"path": "res://addons/world/src/resolver/height.gd"
-}, {
-"base": "Reference",
-"class": "MUW_Resolver_Height_Factory",
-"language": "GDScript",
-"path": "res://addons/world/src/resolver/height_factory.gd"
+"path": "res://addons/world/src/points.gd"
 }, {
 "base": "GdUnitTestSuite",
 "class": "MUW_Test_World",
 "language": "GDScript",
 "path": "res://addons/world/test/world.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Tile_Types",
+"language": "GDScript",
+"path": "res://addons/world/src/tiles/tile_types.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Tiles",
+"language": "GDScript",
+"path": "res://addons/world/src/tiles/tiles.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Tiles_Factory",
+"language": "GDScript",
+"path": "res://addons/world/src/tiles/tiles_factory.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Tiles_Processor_2d",
+"language": "GDScript",
+"path": "res://addons/world/src/tiles/tiles_processor_2d.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Tiles_Processor_3d",
+"language": "GDScript",
+"path": "res://addons/world/src/tiles/tiles_processor_3d.gd"
+}, {
+"base": "Reference",
+"class": "MUW_Tiles_Processor_Factory",
+"language": "GDScript",
+"path": "res://addons/world/src/tiles/tiles_processor_factory.gd"
 }, {
 "base": "Reference",
 "class": "MUW_Transformers_Screen_Mesh",
@@ -678,16 +663,6 @@ _global_script_classes=[ {
 "class": "MUW_World_Factory",
 "language": "GDScript",
 "path": "res://addons/world/src/world_factory.gd"
-}, {
-"base": "Reference",
-"class": "MU_World_TileMap",
-"language": "GDScript",
-"path": "res://addons/pathing/src/world/world.gd"
-}, {
-"base": "Reference",
-"class": "Pathing",
-"language": "GDScript",
-"path": "res://addons/pathing/src/pathing/pathing.gd"
 }, {
 "base": "Reference",
 "class": "RPC",
@@ -900,27 +875,22 @@ _global_script_class_icons={
 "IntFuzzer": "",
 "JUnitXmlReport": "",
 "LocalTime": "",
-"MUP_Dimension_2D_Processor": "",
-"MUP_Dimension_3D_Processor": "",
 "MUP_Pathing": "",
 "MUP_Pathing_Factory": "",
 "MUP_Test_Pathing": "",
-"MUP_Test_World": "",
-"MUP_World": "",
-"MUP_World_Factory": "",
-"MUP_World_Mesh_Picking": "",
-"MUP_World_Transformers_Screen_Mesh": "",
-"MUP_World_Transformers_Screen_Tilemap": "",
 "MUW_Mesh_Picker": "",
-"MUW_Resolver_Height": "",
-"MUW_Resolver_Height_Factory": "",
+"MUW_Points": "",
 "MUW_Test_World": "",
+"MUW_Tile_Types": "",
+"MUW_Tiles": "",
+"MUW_Tiles_Factory": "",
+"MUW_Tiles_Processor_2d": "",
+"MUW_Tiles_Processor_3d": "",
+"MUW_Tiles_Processor_Factory": "",
 "MUW_Transformers_Screen_Mesh": "",
 "MUW_Transformers_Screen_Tilemap": "",
 "MUW_World": "",
 "MUW_World_Factory": "",
-"MU_World_TileMap": "",
-"Pathing": "",
 "RPC": "",
 "RPCClientConnect": "",
 "RPCClientDisconnect": "",
@@ -945,10 +915,11 @@ _global_script_class_icons={
 [application]
 
 config/name="Pathing"
+run/main_scene="res://addons/pathing/scenes/test_3d.tscn"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/gdUnit3/plugin.cfg", "res://addons/pathing/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/gdUnit3/plugin.cfg", "res://addons/pathing/plugin.cfg", "res://addons/world/plugin.cfg" )
 
 [input]
 
